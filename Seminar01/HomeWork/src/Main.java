@@ -9,17 +9,17 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         ArrayList<ExtraHotDrinks> hotDrinks = new ArrayList<>();
-        hotDrinks.add(new ExtraHotDrinks("Кофе", 300, 60.0));
-        hotDrinks.add(new ExtraHotDrinks("Чай", 250, 70.0));
-        hotDrinks.add(new ExtraHotDrinks("Какао", 350, 55.0));
-        hotDrinks.add(new ExtraHotDrinks("Глинтвейн", 500, 50.0));
+        hotDrinks.add(new ExtraHotDrinks("Кофе", 0.3, 60));
+        hotDrinks.add(new ExtraHotDrinks("Чай", 0.25, 70));
+        hotDrinks.add(new ExtraHotDrinks("Какао", 0.35, 55));
+        hotDrinks.add(new ExtraHotDrinks("Глинтвейн", 0.5, 50));
 
         HotDrinksSaleMachine hotDrinksSaleMachine = new HotDrinksSaleMachine();
         hotDrinksSaleMachine.initDrinks(hotDrinks);
 
         System.out.println(hotDrinksSaleMachine.getDrink("Чай"));
-        System.out.println(hotDrinksSaleMachine.getDrink(350));
-        System.out.println(hotDrinksSaleMachine.getDrink(50.0));
-        System.out.println(hotDrinksSaleMachine.getDrink("Кофе", 300, 60));
+        System.out.println(hotDrinksSaleMachine.getDrink(50));
+        System.out.println(hotDrinksSaleMachine.getDrink(0.35));
+        System.out.println(hotDrinksSaleMachine.getDrink("Кофе", 0.3, 60));
     }
 }

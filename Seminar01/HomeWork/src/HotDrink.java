@@ -1,8 +1,8 @@
 public class HotDrink {
     private String name;
-    private int volume;
+    private double volume;
 
-    public HotDrink(String name, int volume) {
+    public HotDrink(String name, double volume) {
         this.name = name;
         this.volume = volume;
     }
@@ -15,11 +15,11 @@ public class HotDrink {
         this.name = name;
     }
 
-    public int getVolume() {
+    public double getVolume() {
         return volume;
     }
 
-    public void setVolume(int volume) {
+    public void setVolume(double volume) {
         this.volume = volume;
     }
 
