@@ -1,6 +1,7 @@
 package Lesson_09.Ex005;
 
 public class Worker implements Comparable<Worker> {
+//public class Worker {
     public String firstName;
     public String lastName;
     public int age;
@@ -27,6 +28,7 @@ public class Worker implements Comparable<Worker> {
 
     @Override
     public int compareTo(Worker o) {
+//        return Integer.compare(this.age, o.age);
         if (this.age > o.age)
             return 1;
         else if (this.age < o.age)

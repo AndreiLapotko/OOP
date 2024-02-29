@@ -23,7 +23,5 @@ public class Coffee extends Beverage {
 
         };
         return it;
-
     }
-
 }
