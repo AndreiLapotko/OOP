@@ -1,6 +1,6 @@
 public interface QueueBehaviour {
-    void takeInQueue(Actor actor);
-    void takeOrders();
+    void takeInQueue();
+    void takeOrders(Human human);
     void giveOrders();
-    void releaseFromQueue();
+    void releaseFromQueue(Human human);
 }

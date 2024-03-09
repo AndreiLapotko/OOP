@@ -1,40 +1,45 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
-public class Market implements QueueBehaviour, MarketBehaviour{
+public class Market implements QueueBehaviour, MarketBehaviour {
+    Queue<Human> humanQueue = new LinkedList<>();
+    List<Human> people = new ArrayList<>();
 
     @Override
-    public void acceptToMarket(Actor actor) {
-
+    public void acceptToMarket(Human human) {
+        people.add(human);
     }
 
     @Override
-    public void releaseFromMarket(List<Actor> actors) {
-
+    public void releaseFromMarket(Human human) {
+        people.remove(human);
     }
 
     @Override
     public void update() {
-        acceptToMarket();
-        releaseFromMarket();
+        takeOrders();
+        giveOrders();
     }
 
     @Override
-    public void takeInQueue(Actor actor) {
-
+    public void takeInQueue() {
+        takeOrders();
     }
-
     @Override
-    public void takeOrders() {
-
+    public void releaseFromQueue(Human human) {
+        giveOrders();
+    }
+    @Override
+    public void takeOrders(Human human) {
+        humanQueue.add(human);
     }
 
     @Override
     public void giveOrders() {
-
+        humanQueue.remove();
     }
 
-    @Override
-    public void releaseFromQueue() {
 
-    }
 }

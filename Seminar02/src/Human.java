@@ -1,4 +1,16 @@
-public class Human extends Actor{
+import java.util.Random;
+
+public class Human extends Actor {
+    static Random r = new Random();
+
+    public Human(String name) {
+        this.name = name;
+    }
+
+    public Human() {
+        this("John " + r.nextInt(1, 100));
+    }
+
     @Override
     public void setMakeOrder() {
         isMakeOrder = true;
@@ -22,5 +34,12 @@ public class Human extends Actor{
     @Override
     String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }
