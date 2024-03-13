@@ -6,6 +6,12 @@ import java.util.List;
 public class Teacher extends User {
     private List<String> disciples;
 
+    /**
+     *
+     * @param name Имя
+     * @param age Возраст
+     * @param disciples Предметы
+     */
     public Teacher(String name, int age, List<String> disciples) {
         this.name = name;
         this.age = age;

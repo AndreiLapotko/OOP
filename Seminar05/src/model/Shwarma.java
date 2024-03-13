@@ -4,6 +4,11 @@ public class Shwarma {//описывает, не содержит логику
     private int cost;
     private String contains;
 
+    /**
+     *
+     * @param cost цена
+     * @param contains состав
+     */
     public Shwarma(int cost, String contains) {
         this.cost = cost;
         this.contains = contains;

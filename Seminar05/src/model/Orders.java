@@ -3,13 +3,18 @@ package model;
 import java.util.ArrayList;
 
 public class Orders {
-    public ArrayList<Shwarma> arrayList;
+    private ArrayList<Shwarma> arrayList;
 
     public Orders() {
         arrayList = new ArrayList<>();
     }
+
+    /**
+     *
+     * @param shwarma
+     */
     public void add(Shwarma shwarma){
-        System.out.println("добавили в orders " + shwarma);
+//        System.out.println("добавили в orders " + shwarma);
         arrayList.add(shwarma);
     }
 

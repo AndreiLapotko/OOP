@@ -24,7 +24,7 @@ public class Phonebook {
     }
 
     // read
-    public Contact getCotact(int index) {
+    public Contact getContact(int index) {
         return contains(index) ? contacts.get(index) : null;
     }
 
