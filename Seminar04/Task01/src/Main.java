@@ -5,6 +5,7 @@ public class Main {
         VetClinic<Animal> vetClinic = new VetClinic<>();
         Cat cat1 = new Cat("Tom");
         Cat cat2 = new Cat("Bazilio");
+        Cat cat3 = new Cat("Ozzi");
 
         Dog dog1 = new Dog("Bob");
         Dog dog2 = new Dog("Puppy");
@@ -16,5 +17,9 @@ public class Main {
         System.out.println(vetClinic);
         vetClinic.help(cat2);
         vetClinic.help(dog1);
+        vetClinic.setClient(cat3);
+        vetClinic.add(cat3);
+        System.out.println(vetClinic);
+        System.out.println(vetClinic.getClient());
     }
 }

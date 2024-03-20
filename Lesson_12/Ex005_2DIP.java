@@ -6,7 +6,7 @@
 
 public class Ex005_2DIP {
     public static void main(String[] args) {
-        BookDIP bookDIP = new BookDIP(new ConsoleViewDIP());
+        BookDIP bookDIP = new BookDIP(new WinFormViewDIP());
         bookDIP.viewAuthor();
     }
 }

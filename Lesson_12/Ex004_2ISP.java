@@ -31,11 +31,11 @@ interface Fax {
 
 }
 
-interface EMail extends BasePhone{
+interface EMail {
     void SendEMail();
 }
 
-class IPhone implements Fax, EMail {
+class IPhone implements BasePhone, Fax, EMail {
 
     @Override
     public void Call() {
