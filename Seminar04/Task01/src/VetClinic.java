@@ -24,7 +24,7 @@ public class VetClinic<T> {
 
     void help(T client) {
         if (clients.contains(client)) {
-            System.out.printf("Клиент %s принят, вылечен и выписан!\n", client);
+            System.out.printf("Клиент %s принят!\n", client);
         } else {
             System.out.printf("Клиент %s отсутствует!", client);
         }

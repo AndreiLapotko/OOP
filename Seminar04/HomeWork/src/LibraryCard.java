@@ -4,10 +4,10 @@
 Добавьте метод для вывода информации о всех выданных книгах с их библиотечными карточками.*/
 
 public class LibraryCard<K, V> {
-    private K number;
-    private V book;
-    private boolean isIssued = false;
-    private String customer;
+    protected K number;
+    protected V book;
+    protected boolean isIssued = false;
+    protected String customer;
     public LibraryCard(V book, boolean isIssued) {
 //        this.number = number;
         this.book = book;

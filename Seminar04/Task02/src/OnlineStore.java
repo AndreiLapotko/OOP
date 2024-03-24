@@ -7,6 +7,10 @@ import java.util.List;
 public class OnlineStore<T, K, V> {
     private List<Product<T>> products;
 
+    public List<Product<T>> getProducts() {
+        return products;
+    }
+
     private int orderCounter;
     private List<Order<K, V>> listOrders;
 

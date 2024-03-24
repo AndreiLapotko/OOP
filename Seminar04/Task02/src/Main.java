@@ -9,8 +9,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         OnlineStore<String, Integer, String> store = new OnlineStore<>();
-        store.addProd(new Product<>("Штаны", 150.0));
-        store.addProd(new Product<>("Носки", 50.0));
+        store.addProd(new Product<>("Штаны", 150.0, new ConsoleProductInfo()));
+        store.addProd(new Product<>("Носки", 50.0, new WinProductInfo()));
+        System.out.println(store.getProducts());
 
         Order<Integer, String> order1 = new Order<>(1111);
         Order<Integer, String> order2 = new Order<>(57);

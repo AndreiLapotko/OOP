@@ -3,6 +3,10 @@
 Создайте класс Library, который будет представлять библиотеку. У этого класса должны быть методы для добавления книг и выдачи библиотечных карточек.
 Добавьте метод для вывода информации о всех выданных книгах с их библиотечными карточками.*/
 
+// SRP - весь функционал разделён на классы, каждый из которых выполняет свою функцию
+// OCP - классы открыты для улучшения: для введедния дополнительного поля в карточку книги, создается класс NewLibraryCard - наследник LibraryCard, в котором добавляется поле id/
+// LSP - наследник: NewLibraryCard, не "ломает" поведение программы и делает не меньше чем родитель
+//
 public class Main {
     public static void main(String[] args) {
         Book<String> b1 = new Book<>("Война и мир", "Л.Н.Толстой");
@@ -14,7 +18,10 @@ public class Main {
         LibraryCard<Integer, Book> card1 = new LibraryCard<>(b1, false);
         LibraryCard<Integer, Book> card2 = new LibraryCard<>(b2, false);
         LibraryCard<Integer, Book> card3 = new LibraryCard<>(b3, false);
-        LibraryCard<Integer, Book> card4 = new LibraryCard<>(b4, false);
+        NewLibraryCard<Integer, Book> card4 = new NewLibraryCard(b4, false);
+        card4.setId(123);
+        System.out.println(card1);
+        card1.setNumber(15);
         System.out.println(card1);
 
         Library library = new Library();

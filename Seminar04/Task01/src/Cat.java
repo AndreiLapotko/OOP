@@ -1,9 +1,7 @@
-public class Cat extends Animal {
-//    private String name;
+public class Cat extends Mammals {
 
     public Cat(String name) {
         super(name);
-//        this.name = name;
     }
 
     public String getName() {
@@ -19,5 +17,15 @@ public class Cat extends Animal {
         return "Cat{" +
                 "name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public void move() {
+        System.out.println("Бегаем");
+    }
+
+    @Override
+    public void sound() {
+        System.out.println("Мяукаем");
     }
 }

@@ -1,4 +1,4 @@
-public class Dog extends Animal{
+public class Dog extends Mammals {
 //    private String name;
     public Dog(String name) {
         super(name);
@@ -17,5 +17,15 @@ public class Dog extends Animal{
         return "Dog{" +
                 "name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public void move() {
+        System.out.println("Бегаем и прыгаем.");
+    }
+
+    @Override
+    public void sound() {
+        System.out.println("Лаем.");
     }
 }
